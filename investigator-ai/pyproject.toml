@@ -1,0 +1,25 @@
+[project]
+name = "investigator-ai"
+version = "0.1.0"
+description = "Junior AI Investigator"
+requires-python = ">=3.11"
+# Tested with: langgraph 1.2, langchain-core 1.6, langchain-google-genai 4.4, pydantic 2.13
+dependencies = [
+    "pydantic>=2.7",
+    "pydantic-settings>=2.2",
+    "python-dotenv>=1.0",
+    "pandas>=2.2",
+    "langgraph>=1.0",
+    "langchain-core>=1.0",
+    "langchain-google-genai>=4.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["investigator_ai*"]

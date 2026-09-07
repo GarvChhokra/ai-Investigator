@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Junior AI Investigator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div>
+          <div class="brand-name">Junior AI Investigator</div>
+          <div class="brand-sub">Long-Term Care claims</div>
+        </div>
+        <div class="topbar-right">
+          <div class="standup" id="standup"></div>
+          <button class="btn" id="assessQueueBtn">Assess queue</button>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="queue-pane">
+          <div class="queue-header">
+            <h2>Queue</h2>
+            <div class="queue-filters" id="queueFilters">
+              <button class="filter-chip active" data-tier="all">All</button>
+              <button class="filter-chip" data-tier="High">High</button>
+              <button class="filter-chip" data-tier="Medium">Medium</button>
+              <button class="filter-chip" data-tier="Low">Low</button>
+            </div>
+          </div>
+          <div class="queue-list" id="queueList">
+            <div class="queue-loading">Loading queue&hellip;</div>
+          </div>
+        </section>
+
+        <section class="detail" id="detailPane">
+          <div class="empty">Select a case to see the AI triage.</div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
